@@ -1,0 +1,8 @@
+${component.type}
+${component.name}
+${pipeline.name}
+${pipeline.name_1}
+${config.schema_registry.url}
+${component.${component.app.foo}}
+${component.app.labels.${component.type}}
+${namespace}
