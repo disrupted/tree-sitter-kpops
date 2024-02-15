@@ -1,0 +1,96 @@
+# vim: set sw=2
+==================
+namespace
+==================
+
+${namespace}
+
+---
+
+(source_file
+  (variable
+    (variable_content
+      (namespace
+        (identifier)))))
+
+==================
+property access
+==================
+
+${component.name}
+
+---
+
+(source_file
+  (variable
+    (variable_content
+      (namespace
+        (identifier))
+      (property_deref)
+      (property
+        (identifier)))))
+
+==================
+identifier name (digits and underscore)
+==================
+
+${pipeline.name_1}
+
+---
+
+(source_file
+  (variable
+    (variable_content
+      (namespace
+        (identifier))
+      (property_deref)
+      (property
+        (identifier)))))
+
+==================
+nested property access
+==================
+
+${config.schema_registry.url}
+
+---
+
+(source_file
+  (variable
+    (variable_content
+      (namespace
+        (identifier))
+      (property_deref)
+      (property
+        (identifier))
+      (property_deref)
+      (property
+        (identifier)))))
+
+==================
+nested variable
+==================
+
+${component.app.labels.${component.type}}
+
+---
+
+(source_file
+  (variable
+    (variable_content
+      (namespace
+        (identifier))
+      (property_deref)
+      (property
+        (identifier))
+      (property_deref)
+      (property
+        (identifier))
+      (property_deref)
+      (variable
+        (variable_content
+          (namespace
+            (identifier))
+          (property_deref)
+          (property
+            (identifier)))))))
